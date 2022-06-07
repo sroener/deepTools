@@ -488,7 +488,7 @@ def interpolate_ratio_csaps(df, smooth=None, normalized=False):
 
     # get min and max values
     N_GC_min, N_GC_max = np.nanmin(N_GC.index.astype("int")), np.nanmax(N_GC.index.astype("int"))
-    F_GC_min, F_GC_max = np.nanmin(F_GC.index.astype("int")), np.nanmax(F_GC.index.astype("int"))
+    # F_GC_min, F_GC_max = np.nanmin(F_GC.index.astype("int")), np.nanmax(F_GC.index.astype("int"))
     # sparse grid for hypothetical read density
     N_GC_readlen = N_GC.index.to_numpy(dtype=int)
     N_GC_gc = N_GC.columns.to_numpy(dtype=int)
