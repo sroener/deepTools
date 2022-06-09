@@ -519,7 +519,7 @@ def interpolate_ratio_csaps(df, smooth=None, normalized=False):
     for i in N_dense_points:
         x = i.tolist()
         scaling = scaling_dict[x[0]]
-        if N_f2(x).round() > 0 and F_f2(x).round() > 0:
+        if N_f2(x).round() > 0 and F_f2(x).round() > 0:  # <= 0.5 will be rounded to zero and replaced by a factor of 1
             ratio = float(F_f2(x).round() / N_f2(x).round() * scaling)
         else:
             ratio = 1
